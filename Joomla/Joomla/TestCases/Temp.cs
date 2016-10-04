@@ -26,8 +26,6 @@ namespace Joomla.TestCases
         public void testSection()
         {
             Pages.LoginAdministrator.LoginToJoomla("demo", "demo123");
-            //this is new comment line 
-            //yeah this new comment again
         }
 
     }
