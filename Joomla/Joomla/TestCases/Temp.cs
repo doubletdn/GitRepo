@@ -4,6 +4,8 @@ using OpenQA.Selenium;
 using Joomla.Factory;
 using Joomla.PageObjects;
 using Joomla.Extensions;
+using OpenQA.Selenium.Support.UI;
+
 
 namespace Joomla.TestCases
 {
@@ -19,14 +21,17 @@ namespace Joomla.TestCases
         [TearDown]
         public void cleaningUp()
         {
-            BrowsersFactory.CloseAllDrives();
+            //BrowsersFactory.CloseAllDrives();
         }
 
         [Test]
         public void testSection()
         {
-            Pages.LoginAdministrator.LoginToJoomla("demo", "demo123");
-            //this is comment
+            //Pages.LoginAdministrator.LoginToJoomla("demo", "demo123");
+
+            IWebElement sSelect = BrowsersFactory.Driver.FindElement(By.Id("lstComponents"));
+            sSelect.Select("Navigate");
+
         }
 
     }

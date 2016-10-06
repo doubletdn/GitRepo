@@ -4,22 +4,23 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Edge;
 
 namespace Joomla.Factory
 {
     class BrowsersFactory
     {
         private static readonly IDictionary<string, IWebDriver> Drivers = new Dictionary<string, IWebDriver>();
-        public static IWebDriver Driver{get; set;}
+        public static IWebDriver Driver { get; set; }
 
         public static void InitBrowser(string browsername)
         {
             if (browsername == null)
                 throw new NullReferenceException("Please specific browser name first!");
-            switch(browsername)
+            switch (browsername)
             {
                 case "Firefox":
-                    if(Driver==null)
+                    if (Driver == null)
                     {
                         Driver = new FirefoxDriver();
                         Drivers.Add("Firefox", Driver);
@@ -38,7 +39,14 @@ namespace Joomla.Factory
                         Driver = new InternetExplorerDriver();
                         Drivers.Add("IE", Driver);
                     }
-                break;
+                    break;
+                case "Edge":
+                    if (Driver == null)
+                    {
+                        Driver = new EdgeDriver("C:\\edge\\");
+                        Drivers.Add("Edge", Driver);
+                    }
+                    break;
             }
         }
 

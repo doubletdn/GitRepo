@@ -7,7 +7,7 @@ namespace Joomla.PageObjects
     class LoginAdministratorPage
     {
         //Init driver
-        private IWebDriver driver;
+        //private IWebDriver driver;
 
         //Init element
         [FindsBy(How = How.Id, Using = "mod-login-username")]

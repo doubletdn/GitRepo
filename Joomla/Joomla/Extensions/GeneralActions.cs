@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Joomla.Factory;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Joomla.Extensions
 {
@@ -18,5 +19,16 @@ namespace Joomla.Extensions
             element.Click();
         }
 
+        public static void Select(this IWebElement element, string itemName)
+        {
+            SelectElement sControl = new SelectElement(element);
+            sControl.SelectByText(itemName);
+        }
+
+        public static void Select(this IWebElement element, int itemIndex)
+        {
+            SelectElement sControl = new SelectElement(element);
+            sControl.SelectByIndex(itemIndex);
+        }
     }
 }
