@@ -27,10 +27,10 @@ namespace Joomla.TestCases
         [Test]
         public void testSection()
         {
-            //Pages.LoginAdministrator.LoginToJoomla("demo", "demo123");
+            Pages.LoginAdministrator.LoginToJoomla("demo", "demo123");
 
-            IWebElement sSelect = BrowsersFactory.Driver.FindElement(By.Id("lstComponents"));
-            sSelect.Select("Navigate");
+            //IWebElement sSelect = BrowsersFactory.Driver.FindElement(By.Id("lstComponents"));
+            //sSelect.Select("Navigate");
 
         }
 
