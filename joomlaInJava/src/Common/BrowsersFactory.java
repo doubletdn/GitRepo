@@ -1,4 +1,4 @@
-package factory;
+package Common;
 
 import java.io.File;
 import java.util.HashMap;
@@ -8,11 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class browserFactory {
+public class BrowsersFactory {
 
 	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
 	private static String IEDriverPath = new File("drivers/IEDriverServer.exe").getAbsolutePath();
 	private static String ChromeDriverPath = new File("drivers/chromedriver.exe").getAbsolutePath();
+	public static WebDriver driver = null;
 
 	// A Map is an object that maps keys to values. A map cannot contain
 	// duplicate keys: Each key can map to at most one value
@@ -22,8 +23,6 @@ public class browserFactory {
 	 * Factory method for getting browsers
 	 */
 	public static WebDriver getBrowser(String browserName) {
-		WebDriver driver = null;
-
 		switch (browserName.toLowerCase()) {
 		case "firefox":
 			driver = drivers.get("firefox");
