@@ -1,11 +1,12 @@
-package sample;
+package Sample;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
-import Common.Contants;
-import Common.BrowsersFactory;
-import Common.Pages;
+
+import Automation.Contants;
+import Factory.BrowsersFactory;
+import Factory.Pages;
 import Pages.joomla_adminstratorLogin;
 
 public class sampleTest {

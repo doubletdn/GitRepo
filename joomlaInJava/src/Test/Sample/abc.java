@@ -1,4 +1,4 @@
-package sample;
+package Sample;
 
 public class abc {
 

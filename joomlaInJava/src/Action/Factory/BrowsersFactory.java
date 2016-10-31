@@ -1,4 +1,4 @@
-package Common;
+package Factory;
 
 import java.io.File;
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class BrowsersFactory {
 
 	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
-	private static String IEDriverPath = new File("drivers/IEDriverServer.exe").getAbsolutePath();
-	private static String ChromeDriverPath = new File("drivers/chromedriver.exe").getAbsolutePath();
+	private static String IEDriverPath = new File("src/Resource/IEDriverServer.exe").getAbsolutePath();
+	private static String ChromeDriverPath = new File("src/Resource/chromedriver.exe").getAbsolutePath();
 	public static WebDriver driver = null;
 
 	// A Map is an object that maps keys to values. A map cannot contain
