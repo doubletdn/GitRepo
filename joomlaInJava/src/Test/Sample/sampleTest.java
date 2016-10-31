@@ -22,13 +22,13 @@ public class sampleTest {
 	@BeforeMethod
 	public void precondition() {
 		BrowsersFactory.getBrowser("firefox");
-		BrowsersFactory.driver.get(Contants.URL);
+//		BrowsersFactory.driver.get();
 	}
 
 	@Test
 	public void test() {
 
-		Pages.adminPage.loginToAdmin(Contants.adminUsername, Contants.adminPassword);
+//		Pages.adminPage.loginToAdmin(Contants.adminUsername, Contants.adminPassword);
 
 	}
 
