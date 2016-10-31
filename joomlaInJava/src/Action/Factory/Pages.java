@@ -3,8 +3,8 @@ package Factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import Pages.joomla_adminstratorLogin;
-import Pages.joomla_controlPanel;
+import Pages.Joomla_adminstratorLogin;
+import Pages.Joomla_controlPanel;
 
 public class Pages {
 
@@ -12,7 +12,7 @@ public class Pages {
 		return PageFactory.initElements(BrowsersFactory.driver, page);
 	}
 
-	public static joomla_adminstratorLogin adminPage = getPage(joomla_adminstratorLogin.class);
-	public static joomla_controlPanel controlpanelPage = getPage(joomla_controlPanel.class);
+	public static Joomla_adminstratorLogin adminPage = getPage(Joomla_adminstratorLogin.class);
+	public static Joomla_controlPanel controlpanelPage = getPage(Joomla_controlPanel.class);
 
 }
