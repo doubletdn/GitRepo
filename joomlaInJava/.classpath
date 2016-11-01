@@ -3,7 +3,8 @@
 	<classpathentry kind="src" path="src/Test"/>
 	<classpathentry kind="src" path="src/Action"/>
 	<classpathentry kind="src" path="src/Resource"/>
-	<classpathentry excluding="Automation/|Resource/|Test/|Action/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/Interface"/>
+	<classpathentry excluding="Automation/|Resource/|Test/|Action/|Interface/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="libs/apache-mime4j-0.6.jar"/>
 	<classpathentry kind="lib" path="libs/bsh-2.0b4.jar"/>
