@@ -2,8 +2,8 @@ package Sample;
 
 import org.testng.annotations.Test;
 
+import Automation.BrowsersFactory;
 import Automation.Contants;
-import Factory.BrowsersFactory;
 
 import org.testng.annotations.BeforeMethod;
 

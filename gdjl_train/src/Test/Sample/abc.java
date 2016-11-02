@@ -12,53 +12,37 @@ import org.w3c.dom.NodeList;
 import Automation.Contants;
 
 public class abc {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 
-	      try {	
-	         File xmlFile = new File("src/Resource/xmlTest.xml");
-	         DocumentBuilderFactory dbFactory 
-	            = DocumentBuilderFactory.newInstance();
-	         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-	         Document doc = dBuilder.parse(xmlFile);
-	         doc.getDocumentElement().normalize();
-	         //print root
-	         System.out.println("Root element :" 
-	            + doc.getDocumentElement().getNodeName());
-	         NodeList nList = doc.getElementsByTagName("student");
-	         System.out.println("----------------------------");
-	         
-	         for (int temp = 0; temp < nList.getLength(); temp++) {
-	            Node nNode = nList.item(temp);
-	            System.out.println("\nCurrent Element :" 
-	               + nNode.getNodeName());
-	            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-	               Element eElement = (Element) nNode;
-	               System.out.println("Student roll no : " 
-	                  + eElement.getAttribute("rollno"));
-	               System.out.println("First Name : " 
-	                  + eElement
-	                  .getElementsByTagName("firstname")
-	                  .item(0)
-	                  .getTextContent());
-	               System.out.println("Last Name : " 
-	               + eElement
-	                  .getElementsByTagName("lastname")
-	                  .item(0)
-	                  .getTextContent());
-	               System.out.println("Nick Name : " 
-	               + eElement
-	                  .getElementsByTagName("nickname")
-	                  .item(0)
-	                  .getTextContent());
-	               System.out.println("Marks : " 
-	               + eElement
-	                  .getElementsByTagName("marks")
-	                  .item(0)
-	                  .getTextContent());
-	            }
-	         }
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      }
-	   }
+		try {
+			File xmlFile = new File("src/Interface/Joomla/AdminstratorLogin.xml");
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(xmlFile);
+			doc.getDocumentElement().normalize();
+			// print root
+			NodeList nList = doc.getElementsByTagName("control");
+			System.out.println("----------------------------");
+			System.out.println("NList= "+nList);
+			System.out.println("NList length= "+nList.getLength());
+
+//			for (int temp = 0; temp < nList.getLength(); temp++) {
+//				Node nNode = nList.item(temp);
+//				System.out.println("\nCurrent Element :" + nNode.getNodeName());
+//				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+//					Element eElement = (Element) nNode;
+//					System.out.println("Student roll no : " + eElement.getAttribute("rollno"));
+//					System.out.println(
+//							"First Name : " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
+//					System.out.println(
+//							"Last Name : " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
+//					System.out.println(
+//							"Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
+//					System.out.println("Marks : " + eElement.getElementsByTagName("marks").item(0).getTextContent());
+//				}
+//			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
