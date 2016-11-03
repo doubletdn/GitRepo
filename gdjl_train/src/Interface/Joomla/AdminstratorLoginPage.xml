@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page name="Administrator">
-	<control>
+	<element>
 		<name>txt_username</name>
 		<type>name</type>
 		<value>username</value>
-	</control>
-	<control>
+	</element>
+	<element>
 		<name>txt_password</name>
 		<type>name</type>
 		<value>passwd</value>
-	</control>
-	<control>
+	</element>
+	<element>
 		<name>btn_login</name>
 		<type>xpath</type>
 		<value>//button[contains(.,'Log in')]</value>
-	</control>
+	</element>
 </page>

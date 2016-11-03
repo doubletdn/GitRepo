@@ -1,4 +1,4 @@
-package Automation;
+package Page;
 
 public class Interfaces {
 	public class AdminstratorLogin {

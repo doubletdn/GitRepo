@@ -10,11 +10,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class BrowsersFactory {
 
-	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
-	private static String IEDriverPath = new File("src/Resource/IEDriverServer.exe").getAbsolutePath();
-	private static String ChromeDriverPath = new File("src/Resource/chromedriver.exe").getAbsolutePath();
-	public static WebDriver driver = null;
-
 	// A Map is an object that maps keys to values. A map cannot contain
 	// duplicate keys: Each key can map to at most one value
 	// The Java platform contains three general-purpose Map implementations:
@@ -50,4 +45,19 @@ public class BrowsersFactory {
 		}
 		return driver;
 	}
+
+	public static void closeBrowser() {
+		driver.close();
+	}
+
+	public static void closeAllBrowsers() {
+		for (Map.Entry<String, WebDriver> entry : drivers.entrySet()) {
+			entry.getValue().close();
+		}
+	}
+
+	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
+	private static String IEDriverPath = new File("src/Resource/IEDriverServer.exe").getAbsolutePath();
+	private static String ChromeDriverPath = new File("src/Resource/chromedriver.exe").getAbsolutePath();
+	public static WebDriver driver = null;
 }
