@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import Automation.Contants;
 
 public class BrowsersFactory {
 
@@ -57,7 +58,7 @@ public class BrowsersFactory {
 	}
 
 	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
-	private static String IEDriverPath = new File("src/Resource/IEDriverServer.exe").getAbsolutePath();
-	private static String ChromeDriverPath = new File("src/Resource/chromedriver.exe").getAbsolutePath();
+	private static String IEDriverPath = new File(Contants.IEDriver).getAbsolutePath();
+	private static String ChromeDriverPath = new File(Contants.chromeDriver).getAbsolutePath();
 	public static WebDriver driver = null;
 }

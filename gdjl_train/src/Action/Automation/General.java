@@ -37,7 +37,7 @@ public class General {
 		}
 		return nList;
 	}
-
+	
 	public void initElement(String eName) {
 		String pagePath = Contants.interfacePath + getPage() + ".xml";
 

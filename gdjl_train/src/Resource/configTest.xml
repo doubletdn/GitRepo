@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DriverManagement>
-	<driver>
-		<name>chromeDriver</name>
-		<path>drivers/chromedriver.exe</path>
-	</driver>
-	<driver>
-		<name>ieDriver</name>
-		<path>drivers/IEDriverServer.exe</path>
-	</driver>
-</DriverManagement>
+<runConfig>
+	<browser>firefox</browser>
+</runConfig>
