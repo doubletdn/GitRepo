@@ -27,13 +27,23 @@ public class Abstract extends General {
 		e.clear();
 		e.sendKeys(value);
 	}
+	
+	public void enter(WebElement eName, String value){
+		eName.clear();
+		eName.sendKeys(value);
+	}
 
 	public void click(String eName) {
 		WebElement e = control.findElement(eName);
 		e.click();
 	}
+	
+	public void click(WebElement eName){
+		eName.click();
+	}
 
 	protected static General control = new General();
+	protected static Pages pages = new Pages();
 	protected static Logger log;
 //	private static Actions act = new Actions(BrowsersFactory.driver);
 }

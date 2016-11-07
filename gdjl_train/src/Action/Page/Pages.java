@@ -1,11 +1,8 @@
 package Page;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import Automation.BrowsersFactory;
-import PageObjects.AdminstratorLoginPage;
-import PageObjects.ControlPanelPage;
 
 public class Pages {
 
@@ -13,7 +10,10 @@ public class Pages {
 		return PageFactory.initElements(BrowsersFactory.driver, page);
 	}
 
-	public static AdminstratorLoginPage AdminstratorLogin = getPage(AdminstratorLoginPage.class);
-	public static ControlPanelPage controlpanelPage = getPage(ControlPanelPage.class);
+//	public static AdminLoginPage AdminstratorLogin = getPage(AdminLoginPage.class);
+//	public static ControlPanelPage controlpanelPage = getPage(ControlPanelPage.class);
+	
 
+	public Joomla.AdminLoginPage e_adminLogin = getPage(Joomla.AdminLoginPage.class);
+	public PageObjects.AdminLoginPage m_adminLogin = getPage(PageObjects.AdminLoginPage.class);
 }

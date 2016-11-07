@@ -1,18 +1,17 @@
 package Automation;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.server.handler.GetPageSource;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import Automation.XMLparse;
-import Automation.ExcelUtils;
+import Page.Interfaces;
+import lombok.Getter;
+import lombok.Setter;
 
-public class General {
+public class General extends Interfaces {
 
 	public void initElement(String eName) {
 
@@ -27,8 +26,8 @@ public class General {
 				Element eElement = (Element) nNode;
 
 				if (eElement.getElementsByTagName("name").item(0).getTextContent().equals(eName)) {
-					seteType(eElement.getElementsByTagName("type").item(0).getTextContent());
-					seteValue(eElement.getElementsByTagName("value").item(0).getTextContent());
+					setEType(eElement.getElementsByTagName("type").item(0).getTextContent());
+					setEValue(eElement.getElementsByTagName("value").item(0).getTextContent());
 				}
 			}
 		}
@@ -47,8 +46,8 @@ public class General {
 		// load control information
 		initElement(eName);
 		By by = null;
-		String type = geteType();
-		String value = geteValue();
+		String type = getEType();
+		String value = getEValue();
 
 		// get element by xpath value
 		if (type.equals("xpath")) {
@@ -65,34 +64,15 @@ public class General {
 
 		return by;
 	}
-	
 
-	public void setPage(String page) {
-		this.page = page;
-	}
-
-	public String getPage() {
-		return page;
-	}
-
-	public String geteType() {
-		return eType;
-	}
-
-	public void seteType(String eType) {
-		this.eType = eType;
-	}
-
-	public String geteValue() {
-		return eValue;
-	}
-
-	public void seteValue(String eValue) {
-		this.eValue = eValue;
-	}
-
+	@Getter
+	@Setter
 	private String page;
+	@Getter
+	@Setter
 	private String eType;
+	@Getter
+	@Setter
 	private String eValue;
 
 }
