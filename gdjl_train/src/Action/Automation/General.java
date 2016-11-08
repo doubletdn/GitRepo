@@ -11,7 +11,7 @@ import Page.Interfaces;
 import lombok.Getter;
 import lombok.Setter;
 
-public class General extends Interfaces {
+public class General {
 
 	public void initElement(String eName) {
 
@@ -75,4 +75,5 @@ public class General extends Interfaces {
 	@Setter
 	private String eValue;
 
+	
 }

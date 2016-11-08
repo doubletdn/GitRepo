@@ -3,7 +3,7 @@ package Page;
 import org.openqa.selenium.support.PageFactory;
 
 import Automation.BrowsersFactory;
-
+import PageObjects.AdminLoginPage;
 public class Pages {
 
 	public static <T> T getPage(Class<T> page) {
@@ -15,5 +15,5 @@ public class Pages {
 	
 
 	public Joomla.AdminLoginPage e_adminLogin = getPage(Joomla.AdminLoginPage.class);
-	public PageObjects.AdminLoginPage m_adminLogin = getPage(PageObjects.AdminLoginPage.class);
+	public PageObjects.AdminLoginPage m_adminLogin = new PageObjects.AdminLoginPage();
 }

@@ -12,7 +12,7 @@ import Automation.General;
 
 public class Abstract extends General {
 
-	protected Abstract(){
+	public Abstract(){
 		log = LogManager.getLogger(getClass());
 		DOMConfigurator.configure(Contants.log4j);
 	}
@@ -42,8 +42,8 @@ public class Abstract extends General {
 		eName.click();
 	}
 
+	
 	protected static General control = new General();
-	protected static Pages pages = new Pages();
 	protected static Logger log;
 //	private static Actions act = new Actions(BrowsersFactory.driver);
 }

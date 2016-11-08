@@ -7,28 +7,30 @@ import org.testng.annotations.Test;
 import Automation.BrowsersFactory;
 import Automation.Contants;
 import Page.Abstract;
+import Page.Pages;
 
 public class TestNGsample extends Abstract {
 
-//	private static Logger log = LogManager.getLogger(TestNGsample.class.getName());
 	@BeforeMethod
 	public void beforeMethod() throws Exception {
-//		DOMConfigurator.configure(Contants.log4j);
 		Abstract.initTest();
 		log.info("init test run");
 	}
 
 	@Test
 	public void f() throws Exception {
-
-		pages.m_adminLogin.loginAdminstrator(Contants.adminUser, Contants.adminPass);
+		Abstract ass = new Abstract();
+//		ass.pages.AdminstratorLogin.loginAdminstrator(Contants.adminUser, Contants.adminPass);
+		//pages.AdminstratorLogin.AdminstratorLogin.loginAdminstrator(Contants.adminUser, Contants.adminPass);
+		Pages.AdminstratorLogin.loginAdminstrator(Contants.adminUser, Contants.adminPass);
+		
 		log.info("Login to App with valid account");
 
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		 BrowsersFactory.closeAllBrowsers();
+//		 BrowsersFactory.closeAllBrowsers();
 		 log.info("Log out App");
 	}
 }
